@@ -1,0 +1,8 @@
+[submodule "fuzzer"]
+	path = fuzzer
+	url = https://github.com/FDU-Program-Analysis/AFL.git
+	branch = dp-dev
+[submodule "recognition"]
+	path = recognition
+	url = https://github.com/FDU-Program-Analysis/chunk-fuzzer-pass.git
+	branch = main
