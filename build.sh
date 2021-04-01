@@ -1,7 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
-RCGN_PATH=`pwd`/recognition
-FUZZ_PATH=`pwd`/fuzzer
+SHELL_DIR=$(readlink -f "$0")
+ROOT_DIR=$(dirname $SHELL_DIR)
+RCGN_PATH=${PREFIX:-${ROOT_DIR}/recognition/}
+FUZZ_PATH=${PREFIX:-${ROOT_DIR}/fuzzer/}
+
+set -euxo pipefail
 
 echo "---build recognition module---"
 cd ${RCGN_PATH}
